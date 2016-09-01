@@ -65,8 +65,8 @@ function scaleToWindow(canvas, backgroundColor) {
             // Chrome
         } else {
             // Safari
-            canvas.style.maxHeight = "100%";
-            canvas.style.minHeight = "100%";
+            // canvas.style.maxHeight = "100%";
+            // canvas.style.minHeight = "100%";
         }
     }
 
