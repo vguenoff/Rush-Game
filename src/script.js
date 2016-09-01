@@ -67,7 +67,7 @@ class Game {
         // 
         console.log(`Welkome to the game. Version ${this.version()}`);
 
-        this.loadSound();
+        // this.loadSound();
 
         this.canvas = document.getElementById('game-canvas');
         this.stage = new createjs.Stage(this.canvas);
@@ -97,9 +97,9 @@ class Game {
     version() {
         return '3.0.1';
     }
-    loadSound() {
-        createjs.Sound.registerSound('../soundfx/coin.wav', 'tapp');
-    }
+    // loadSound() {
+    //     createjs.Sound.registerSound('../soundfx/coin.wav', 'tapp');
+    // }
     startRestartGame(first = true) {
         this.gameData.resetData();
         this.stage.removeAllChildren();
@@ -158,7 +158,7 @@ class Game {
     }
     handleClick(numberedBox) {
         if(this.gameData.isRightNUmber(numberedBox.number)) {
-            createjs.Sound.play('tapp');
+            // createjs.Sound.play('tapp');
             this.gameData.nextNumber();
 
             createjs.Tween.get(numberedBox)
