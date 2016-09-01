@@ -24,7 +24,7 @@ function resizeGame() {
     gameCanvas.width = newWidth;
     gameCanvas.height = newHeight;
 }
-resizeGame();
 
-window.addEventListener('resize', resizeGame, false);
+// window.addEventListener('resize', resizeGame, false);
 window.addEventListener('orientationchange', resizeGame, false);
+resizeGame();
