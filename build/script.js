@@ -114,6 +114,18 @@ var Game = function () {
         this.canvas = document.getElementById('game-canvas');
         this.stage = new createjs.Stage(this.canvas);
 
+        var resized = function resized(r) {
+            window.addEventListener('resize', function () {
+                return scaleToWindow(r);
+            });
+            window.addEventListener('orientationchange', function () {
+                return scaleToWindow(r);
+            });
+            window.scaleToWindow(r);
+        };
+
+        resized(this.canvas);
+
         window.debugStage = this.stage; // debugStage.children in the browser console
 
         this.stage.enableMouseOver();

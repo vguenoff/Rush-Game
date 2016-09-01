@@ -64,6 +64,8 @@ class GameData {
 }
 class Game {
     constructor() {
+
+
         // 
         console.log(`Welkome to the game. Version ${this.version()}`);
 
@@ -71,6 +73,15 @@ class Game {
 
         this.canvas = document.getElementById('game-canvas');
         this.stage = new createjs.Stage(this.canvas);
+
+        let resized = (r) => {
+            window.addEventListener('resize', () => scaleToWindow(r));
+            window.addEventListener('orientationchange', () => scaleToWindow(r));
+            window.scaleToWindow(r);            
+        };
+
+        resized(this.canvas);
+
 
         window.debugStage = this.stage; // debugStage.children in the browser console
 
