@@ -1,7 +1,3 @@
-html{
-    overflow: hidden;
-}
-
 body, div, canvas, h1 {
     margin: 0;
     padding: 0;
@@ -10,7 +6,7 @@ body {
     background: #4ccce4;
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 canvas {
   background: white;
