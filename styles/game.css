@@ -1,0 +1,35 @@
+body, div, canvas, h1 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url(../images/pattern.png) #4ccce4;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 5px solid black;
+}
+/* h1 {
+    left: 0.5em;
+    font-family: monospace;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 1em;
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    top: 5%;
+} */
+#game {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+#game-canvas {
+  width: 100%;
+  height: 100%;
+}
+@viewport {
+    orientation: portrait;
+}
