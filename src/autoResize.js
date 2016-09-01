@@ -38,13 +38,18 @@ function scaleToWindow(canvas, backgroundColor) {
         margin = (window.innerWidth - canvas.offsetWidth * scale) / 2;
         canvas.style.marginLeft = margin + "px";
         canvas.style.marginRight = margin + "px";
+
+        canvas.style.marginTop = 0;
+
     }
 
     //Center vertically (for wide canvases) 
-    if (center === "vertically") {
+    else if (center === "vertically") {
         margin = (window.innerHeight - canvas.offsetHeight * scale) / 2;
         canvas.style.marginTop = margin + "px";
         canvas.style.marginBottom = margin + "px";
+
+        canvas.style.marginLeft = 0;
     }
 
     //3. Remove any padding from the canvas  and body and set the canvas
@@ -72,5 +77,6 @@ function scaleToWindow(canvas, backgroundColor) {
 
     //5. Return the `scale` value. This is important, because you'll nee this value 
     //for correct hit testing between the pointer and sprites
+    console.log(center);
     return scale;
 }
